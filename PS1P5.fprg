@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="HP 14bs i5 7th"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-22 11:10:50 PM"/>
+        <attribute name="created" value="SFAgMTRicyBpNSA3dGg7REVTS1RPUC1GNjdRNUZKOzIwMjMtMDItMjI7MDg6NTE6MzggUE07MzMxNw=="/>
+        <attribute name="edited" value="SFAgMTRicyBpNSA3dGg7REVTS1RPUC1GNjdRNUZKOzIwMjMtMDItMjI7MDg6NTI6MzQgUE07MTtIUCAxNGJzIGk1IDd0aDtERVNLVE9QLUY2N1E1Rko7MjAyMy0wMi0yMjswODo0Mjo1MCBQTTs2Nzky"/>
+        <attribute name="edited" value="SFAgMTRicyBpNSA3dGg7REVTS1RPUC1GNjdRNUZKOzIwMjMtMDItMjI7MTE6MTA6NTAgUE07MjszNDA5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="PRICE" type="Real" array="False" size=""/>
+            <declare name="DISCOUNTPERCENT" type="Real" array="False" size=""/>
+            <declare name="DISCOUNTAMOUNT" type="Real" array="False" size=""/>
+            <declare name="DISCOUNTPRICE" type="Integer" array="False" size=""/>
+            <input variable="PRICE"/>
+            <input variable="DISCOUNTPERCENT"/>
+            <assign variable="DISCOUNTPRICE" expression="PRICE - (PRICE * DISCOUNTPERCENT)"/>
+            <assign variable="DISCOUNTAMOUNT" expression="PRICE * DISCOUNTPERCENT"/>
+            <output expression="&quot;YOUR DISCOUNTAMOUNT IS $&quot; &amp;DISCOUNTAMOUNT" newline="True"/>
+            <output expression="&quot;YOUR DISCOUNTPRICE IS $&quot; &amp;DISCOUNTPRICE" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="HP 14bs i5 7th"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-27 12:42:05 AM"/>
+        <attribute name="created" value="SFAgMTRicyBpNSA3dGg7REVTS1RPUC1GNjdRNUZKOzIwMjMtMDItMjc7MTI6MjY6MDkgQU07MzMwMg=="/>
+        <attribute name="edited" value="SFAgMTRicyBpNSA3dGg7REVTS1RPUC1GNjdRNUZKOzIwMjMtMDItMjc7MTI6NDI6MDUgQU07MTszNDA0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="LASTNAME" type="String" array="False" size=""/>
+            <declare name="HRS" type="Real" array="False" size=""/>
+            <declare name="PAYRATE" type="Real" array="False" size=""/>
+            <declare name="GROSSPAY" type="Real" array="False" size=""/>
+            <input variable="LASTNAME"/>
+            <input variable="HRS"/>
+            <input variable="PAYRATE"/>
+            <assign variable="GROSSPAY" expression="HRS * PAYRATE"/>
+            <output expression="&quot;YOUR LASTNAME IS &quot; &amp; LASTNAME" newline="True"/>
+            <output expression="&quot; YOUR GROSSPAY IS $&quot; &amp; GROSSPAY" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
