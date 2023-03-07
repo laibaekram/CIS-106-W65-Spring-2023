@@ -1,0 +1,10 @@
+#input phase
+radius = float(input("enter radius"))
+
+#process phase
+area = 3.174 * (radius * radius)
+perimeter = (2 * 3.174 * radius)
+
+#output phase
+print ("area is ", area)
+print ("perimeter is ", perimeter)
