@@ -1,0 +1,17 @@
+#input phase
+make = input("enter make")
+model = input("enter model")
+MSRP = float(input("enter MSRP"))
+discountpercent = float(input("enter discountpercent"))
+
+#process phase
+amountoff = MSRP * discountpercent
+discountedprice = MSRP - amountoff
+
+#output phase
+print("make is " ,make)
+print("model is " ,model)
+print("MSRP is ",MSRP)
+print ("discountpercent is " ,discountpercent)
+print ("amountoff is " ,amountoff)
+print ("discountedprice is " , discountedprice)
