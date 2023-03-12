@@ -1,0 +1,32 @@
+# PS3P3 - Tip Calculator
+
+# take input from user
+totalMeal = float(input("Enter total for a meal: "))
+
+# calculate tip amounts
+tip15 = totalMeal * 0.15
+tip18 = totalMeal * 0.18
+tip20 = totalMeal * 0.20
+
+# calculate total amounts
+total15 = totalMeal + tip15
+total18 = totalMeal + tip18
+total20 = totalMeal + tip20
+
+# display results
+print("With 15% Tip:")
+print("Total:", totalMeal)
+print("Tip:", tip15)
+print("Total with Tip:", total15)
+print()
+
+print("With 18% Tip:")
+print("Total:", totalMeal)
+print("Tip:", tip18)
+print("Total with Tip:", total18)
+print()
+
+print("With 20% Tip:")
+print("Total:", totalMeal)
+print("Tip:", tip20)
+print("Total with Tip:", total20)
