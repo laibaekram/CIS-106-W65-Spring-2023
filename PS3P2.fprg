@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="LENOVO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-11 10:37:00 PM"/>
+        <attribute name="created" value="TEVOT1ZPO0xBSUJBOzIwMjMtMDMtMTE7MTA6MDM6NTkgUE07MjA4Ng=="/>
+        <attribute name="edited" value="TEVOT1ZPO0xBSUJBOzIwMjMtMDMtMTE7MTA6MzY6NTkgUE07MTsyMjAw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="quantity" type="Real" array="False" size=""/>
+            <declare name="pricepershare" type="Real" array="False" size=""/>
+            <declare name="increase" type="Real" array="False" size=""/>
+            <declare name="decrease" type="Real" array="False" size=""/>
+            <declare name="currentprice" type="Real" array="False" size=""/>
+            <declare name="value" type="Real" array="False" size=""/>
+            <input variable="pricepershare"/>
+            <input variable="currentprice"/>
+            <input variable="quantity"/>
+            <assign variable="increase" expression="(currentprice - pricepershare) * quantity"/>
+            <output expression="&quot;increase is &quot; &amp;increase" newline="True"/>
+            <output expression="&quot;decrease is &quot; &amp;decrease" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

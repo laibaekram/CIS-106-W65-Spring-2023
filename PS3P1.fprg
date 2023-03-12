@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="LENOVO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-11 09:56:56 PM"/>
+        <attribute name="created" value="TEVOT1ZPO0xBSUJBOzIwMjMtMDMtMTE7MDk6NTE6MzMgUE07MjA4OQ=="/>
+        <attribute name="edited" value="TEVOT1ZPO0xBSUJBOzIwMjMtMDMtMTE7MDk6NTY6NTYgUE07MTsyMjA3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="score1" type="Real" array="False" size=""/>
+            <declare name="score2" type="Real" array="False" size=""/>
+            <declare name="totalscore" type="Real" array="False" size=""/>
+            <input variable="score1"/>
+            <input variable="score2"/>
+            <assign variable="totalscore" expression="(score1 * 60/100) + (score2 * 40/100)"/>
+            <output expression="&quot;total score is&quot; &amp; totalscore" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

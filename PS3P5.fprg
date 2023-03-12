@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="LENOVO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-11 11:07:05 PM"/>
+        <attribute name="created" value="TEVOT1ZPO0xBSUJBOzIwMjMtMDMtMTE7MTE6MDE6MDUgUE07MjA3Ng=="/>
+        <attribute name="edited" value="TEVOT1ZPO0xBSUJBOzIwMjMtMDMtMTE7MTE6MDc6MDUgUE07MTsyMTkw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="FIXEDCOSTS" type="Real" array="False" size=""/>
+            <declare name="PRICEPERUNIT" type="Real" array="False" size=""/>
+            <declare name="COSTPERUNIT" type="Real" array="False" size=""/>
+            <declare name="BREAKEVENPOINT" type="Real" array="False" size=""/>
+            <input variable="FIXEDCOSTS"/>
+            <input variable="PRICEPERUNIT"/>
+            <input variable="COSTPERUNIT"/>
+            <assign variable="BREAKEVENPOINT" expression="FIXEDCOSTS / (PRICEPERUNIT - COSTPERUNIT)"/>
+            <output expression="&quot;BREAKEVENPOINT IS &quot; &amp;BREAKEVENPOINT" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

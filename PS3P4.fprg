@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="LENOVO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-11 10:59:21 PM"/>
+        <attribute name="created" value="TEVOT1ZPO0xBSUJBOzIwMjMtMDMtMTE7MTA6NTQ6NDEgUE07MjA4Mw=="/>
+        <attribute name="edited" value="TEVOT1ZPO0xBSUJBOzIwMjMtMDMtMTE7MTA6NTk6MjEgUE07MTsyMTk0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="firstname" type="String" array="False" size=""/>
+            <declare name="steps" type="Real" array="False" size=""/>
+            <declare name="caloriesburned" type="Real" array="False" size=""/>
+            <input variable="firstname"/>
+            <input variable="steps"/>
+            <assign variable="caloriesburned" expression="steps * 0.25"/>
+            <output expression="&quot;firstname is&quot; &amp;firstname" newline="True"/>
+            <output expression="&quot;caloriesburned is&quot; &amp;caloriesburned" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
