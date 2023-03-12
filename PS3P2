@@ -1,0 +1,15 @@
+# PS3P2 - Stock Value Calculator
+
+# Input purchase price per share, current stock price, and quantity of stock
+purchase_price = float(input("Enter purchase price per share: "))
+current_price = float(input("Enter current stock price: "))
+quantity = int(input("Enter quantity of stock: "))
+
+# Calculate increase/decrease of stock value
+value = (current_price - purchase_price) * quantity
+
+# Display value of stock
+if value >= 0:
+    print("The value of the stock has increased by $", format(value, ".2f"))
+else:
+    print("The value of the stock has decreased by $", format(abs(value), ".2f"))
