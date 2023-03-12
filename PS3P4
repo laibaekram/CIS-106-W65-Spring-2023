@@ -1,0 +1,11 @@
+# PS3P4 - Calories Burned from Steps Walked
+
+# take input from user
+firstName = input("Enter first name: ")
+steps = int(input("Enter number of steps walked in a day: "))
+
+# calculate calories burned
+calories = steps * 0.25
+
+# display result
+print(firstName, "burned", calories, "calories.")
