@@ -1,0 +1,12 @@
+# PS3P5 - Break-Even Point
+
+# take input from user
+fixedCosts = float(input("Enter fixed costs: "))
+pricePerUnit = float(input("Enter price per unit: "))
+costPerUnit = float(input("Enter cost per unit: "))
+
+# calculate break-even point
+breakEvenPoint = fixedCosts / (pricePerUnit - costPerUnit)
+
+# display result
+print("Break-even point:", breakEvenPoint)
