@@ -1,16 +1,13 @@
-quantity = int(input("Enter quantity of item: "))
+item = input("what is the item")
+quantity = int(input("what is the quantity"))
 
-if quantity >= 1000:
-    unit_price = 3.00
+if item == "A":
+ unitprice = 10
 else:
-    unit_price = 5.00
+ unitprice = 20
 
-extended_price = quantity * unit_price
-tax = 0.07 * extended_price
-total = extended_price + tax
+extendedprice = quantity * unitprice 
 
-print("Quantity:", quantity)
-print("Unit price: ${:.2f}".format(unit_price))
-print("Extended price: ${:.2f}".format(extended_price))
-print("Tax: ${:.2f}".format(tax))
-print("Total: ${:.2f}".format(total))
+print  ("item is    ", item)
+print  ("unitprice is $  ", unitprice)
+print  ("extendedprice is $ ", extendedprice)
