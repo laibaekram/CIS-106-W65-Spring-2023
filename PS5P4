@@ -1,0 +1,14 @@
+name = input("Enter appliance name: ")
+cost = float(input("Enter appliance cost: "))
+
+if cost > 1000:
+    warranty_cost = 0.1 * cost
+else:
+    warranty_cost = 0.05 * cost
+
+total_cost = cost + warranty_cost
+
+print("Name: ", name)
+print("Cost: $", cost)
+print("Warranty Cost: $", warranty_cost)
+print("Total Cost: $", total_cost)
