@@ -1,0 +1,23 @@
+# Get input
+part = input("Enter the part number: ")
+quantity = int(input("Enter the quantity: "))
+
+# Determine the unit cost based on the part number
+if part == "10" or part == "55":
+    unit_cost = 1.00
+else:
+    if part == "99":
+        unit_cost = 2.00
+    else:
+        if part == "80" or part == "70":
+            unit_cost = 3.00
+        else:
+            unit_cost = 5.00
+
+# Calculate the total cost
+total_cost = quantity * unit_cost
+
+# Display the results
+print("Part Number: " + str(part))
+print("Cost per Unit: $" + str(unit_cost))
+print("Total Cost: $" + str(total_cost))
