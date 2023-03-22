@@ -1,0 +1,23 @@
+# Get input
+principle = float(input("Enter the principle amount: "))
+years_to_maturity = int(input("Enter the years to maturity: "))
+
+# Determine the interest rate based on the principle and years to maturity
+if principle > 100000 and years_to_maturity == 5:
+    interest_rate = 0.06
+else:
+    if principle >= 50000 and principle <= 100000 and years_to_maturity == 10:
+        interest_rate = 0.05
+    else:
+        if principle >= 50000 and principle <= 100000 and years_to_maturity == 5:
+            interest_rate = 0.04
+        else:
+            interest_rate = 0.02
+
+# Calculate the interest for the first year
+interest = principle * interest_rate
+
+# Display the results
+print("Principle: $" + str(principle))
+print("Interest Rate: " + str(interest_rate * 100) + "%")
+print("Interest for First Year: $" + str(interest))
