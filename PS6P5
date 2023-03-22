@@ -1,0 +1,22 @@
+# Get input
+num_tickets = int(input("Enter the number of tickets: "))
+
+# Determine the price per ticket based on the quantity
+if num_tickets >= 25:
+    price_per_ticket = 50
+else:
+    if num_tickets >= 10 and num_tickets <= 24:
+        price_per_ticket = 60
+    else:
+        if num_tickets >= 5 and num_tickets <= 9:
+            price_per_ticket = 70
+        else:
+            price_per_ticket = 75
+
+# Calculate the total cost
+total_cost = num_tickets * price_per_ticket
+
+# Display the results
+print("Number of Tickets: " + str(num_tickets))
+print("Price Per Ticket: $" + str(price_per_ticket))
+print("Total Cost: $" + str(total_cost))
