@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="LENOVO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-21 08:41:10 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLVQ5SE1WTDA7MjAyMy0wMy0yMTswODoyMjowOSBQTTszMzUz"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLVQ5SE1WTDA7MjAyMy0wMy0yMTswODo0MToxMCBQTTsxOzM0NTQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="PRINCIPLEAMOUNT" type="Real" array="False" size=""/>
+            <declare name="YEARS" type="Real" array="False" size=""/>
+            <declare name="INTERESTRATE" type="Real" array="False" size=""/>
+            <declare name="INTEREST" type="Real" array="False" size=""/>
+            <input variable="PRINCIPLEAMOUNT"/>
+            <input variable="YEARS"/>
+            <if expression="PRINCIPLEAMOUNT &gt; 100000">
+                <then>
+                    <assign variable="INTERESTRATE" expression="6/100"/>
+                    <assign variable="YEARS" expression="5"/>
+                </then>
+                <else>
+                    <if expression="PRINCIPLEAMOUNT &gt; 50000">
+                        <then>
+                            <assign variable="YEARS" expression="10"/>
+                            <assign variable="INTERESTRATE" expression="5/100"/>
+                        </then>
+                        <else>
+                            <if expression="PRINCIPLEAMOUNT &gt; 250000">
+                                <then>
+                                    <assign variable="INTERESTRATE" expression="4/100"/>
+                                    <assign variable="YEARS" expression="5"/>
+                                </then>
+                                <else>
+                                    <assign variable="INTERESTRATE" expression="2/100"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="INTEREST" expression="PRINCIPLEAMOUNT * INTERESTRATE"/>
+            <output expression="&quot;PRINCIPLEAMOUNT IS &quot; &amp;PRINCIPLEAMOUNT" newline="True"/>
+            <output expression="&quot;INTERESTRATE IS &quot; &amp;INTERESTRATE" newline="True"/>
+            <output expression="&quot;INTERESTT IS &quot; &amp;INTEREST" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
