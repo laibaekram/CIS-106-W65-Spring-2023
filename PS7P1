@@ -1,6 +1,7 @@
-start = 1
-end = 25
-while start <= end:
-    if start % 2 != 0:
-        print(start)
-    start += 1
+startv = 1
+stopv = 25 
+incrv = 2
+
+while startv <= stopv:
+    print(startv)
+    startv = startv + incrv
