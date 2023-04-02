@@ -1,0 +1,26 @@
+discount_sum = 0
+loop_control = "Yes"
+
+while loop_control == "Yes":
+    quantity = float(input("Enter quantity: "))
+    price = float(input("Enter price: "))
+
+    extended_price = quantity * price
+    if extended_price > 10000.0:
+        discount_percent = 0.25
+    else:
+        discount_percent = 0.1
+
+    discount = extended_price * discount_percent
+
+    total = extended_price - discount
+
+    print("Extended price: $", format(extended_price, ",.2f"))
+    print("Discount amount: $", format(discount, ",.2f"))
+    print("Total: $", format(total, ",.2f"))
+
+    discount_sum += discount
+
+    loop_control = input("Do you want to enter another order? (Yes/No): ")
+
+print("Total discounts: $", format(discount_sum, ",.2f"))
