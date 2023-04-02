@@ -1,0 +1,17 @@
+response = input("Do you want to continue? (Enter 'Yes' to continue)")
+
+count = 0
+while response == "Yes":
+    last_name = input("Enter your last name: ")
+    score1 = float(input("Enter your first exam score: "))
+    score2 = float(input("Enter your second exam score: "))
+
+    avg_score = (score1 + score2) / 2
+
+    print(f"{last_name}'s average exam score is {avg_score:.2f}")
+
+    count += 1
+
+    response = input("Do you want to do this again? (Enter 'Yes' to continue)")
+
+print(f"{count} students entered data.")
