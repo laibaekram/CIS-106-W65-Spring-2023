@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="LENOVO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-26 06:52:55 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUs1OUVEU0Y7MjAyMi0wMy0yNjswNjozNzowNyBQTTszMzM0"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUs1OUVEU0Y7MjAyMi0wMy0yNjswNjo1Mjo1NSBQTTsxOzM0NDI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="startv" type="Integer" array="False" size=""/>
+            <declare name="stopv" type="Integer" array="False" size=""/>
+            <declare name="incrv" type="Integer" array="False" size=""/>
+            <input variable="startv"/>
+            <input variable="stopv"/>
+            <input variable="incrv"/>
+            <while expression="startv &lt;= stopv">
+                <output expression="startv" newline="True"/>
+                <assign variable="startv" expression="startv + incrv"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
