@@ -1,0 +1,28 @@
+loop = input("Do you want to enter employee data? Enter 'Yes' or 'No': ")
+
+gross_pay_total = 0
+employee_count = 0
+
+while loop == "Yes":
+    last_name = input("Enter employee last name: ")
+    hours_worked = float(input("Enter hours worked: "))
+    rate_of_pay = float(input("Enter rate of pay: "))
+
+    if hours_worked > 40:
+        gross_pay = 40 * rate_of_pay + (hours_worked - 40) * (rate_of_pay * 1.5)
+    else:
+        gross_pay = hours_worked * rate_of_pay
+
+    gross_pay_total += gross_pay
+    employee_count += 1
+
+    print("Employee:", last_name)
+    print("Gross pay: $", format(gross_pay, '.2f'), "\n")
+
+    loop = input("Do you want to enter more employee data? Enter 'Yes' or 'No': ")
+    print()
+
+average_pay = gross_pay_total / employee_count
+print("Total gross pay: $", format(gross_pay_total, '.2f'))
+print("Number of employees: ", employee_count)
+print("Average pay: $", format(average_pay, '.2f'))
