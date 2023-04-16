@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="LENOVO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-04-12 01:58:15 AM"/>
+        <attribute name="created" value="TEVOT1ZPO0xBSUJBOzIwMjMtMDQtMTI7MDE6Mzk6MDAgQU07MjA2OA=="/>
+        <attribute name="edited" value="TEVOT1ZPO0xBSUJBOzIwMjMtMDQtMTI7MDE6NTg6MTUgQU07MTsyMTgz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="jobcode" type="String" array="False" size=""/>
+            <declare name="hoursworked" type="Real" array="False" size=""/>
+            <declare name="payrate" type="Real" array="False" size=""/>
+            <declare name="grosspay" type="Real" array="False" size=""/>
+            <input variable="lastname"/>
+            <input variable="jobcode"/>
+            <input variable="hoursworked"/>
+            <output expression="&quot;Enter last name: &quot; &amp;lastname" newline="True"/>
+            <output expression="&quot;Enter job code (L, A, J): &quot; &amp; jobcode" newline="True"/>
+            <output expression="&quot; Enter hours worked: &quot; &amp;hoursworked" newline="True"/>
+        </body>
+    </function>
+    <function name="compgrosspay" type="Real" variable="grosspay">
+        <parameters>
+            <parameter name="hoursworked" type="Real" array="False"/>
+            <parameter name="payrate" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="grosspay" type="Real" array="False" size=""/>
+            <declare name="overtimethreshold" type="Real" array="False" size=""/>
+            <assign variable="overtimethreshold" expression="40.0"/>
+            <if expression="hoursworked &lt;= overtimethreshold">
+                <then>
+                    <assign variable="grosspay" expression="hoursworked * payrate"/>
+                </then>
+                <else>
+                    <assign variable="grosspay" expression="(overtimethreshold * payrate) + ((hoursworked - overtimethreshold) * (payrate * 1.5))"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="comppayrate" type="Real" variable="payrate">
+        <parameters>
+            <parameter name="jobcode" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="payrate" type="Real" array="False" size=""/>
+            <declare name="A" type="String" array="False" size=""/>
+            <declare name="L" type="String" array="False" size=""/>
+            <declare name="J" type="String" array="False" size=""/>
+            <declare name="invalid" type="String" array="False" size=""/>
+            <if expression="jobcode = A">
+                <then>
+                    <output expression="30.0" newline="True"/>
+                </then>
+                <else>
+                    <output expression="Invalid" newline="True"/>
+                </else>
+            </if>
+            <if expression="jobcode = L">
+                <then>
+                    <output expression="25.0" newline="True"/>
+                </then>
+                <else>
+                    <output expression="Invalid" newline="True"/>
+                </else>
+            </if>
+            <if expression="jobcode = J">
+                <then>
+                    <output expression="50.0" newline="True"/>
+                </then>
+                <else>
+                    <output expression="Invalid" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
