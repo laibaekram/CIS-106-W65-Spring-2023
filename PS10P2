@@ -1,0 +1,18 @@
+def compute_exam_scores(last_name, exam_scores):
+    total_points = sum(exam_scores)
+    average_score = total_points / len(exam_scores)
+    return (total_points, average_score, last_name)
+# Get input from user
+last_name = input("Enter the student's last name: ")
+exam_scores = []
+for i in range(3):
+    score = float(input(f"Enter exam score {i+1}: "))
+    exam_scores.append(score)
+
+# Compute total points and average score
+total_points, average_score, last_name = compute_exam_scores(last_name, exam_scores)
+
+# Print results
+print(f"Student Last Name: {last_name}")
+print(f"Total Points: {total_points}")
+print(f"Average Exam Score: {average_score}")
