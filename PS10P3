@@ -1,0 +1,18 @@
+def compute_sales_report(last_name, sales):
+    if sales > 100000:
+        commission = sales * 0.1
+    else:
+        commission = sales * 0.05
+    next_year_target = sales * 0.05
+    return (commission, next_year_target, last_name)
+  # Get input from user
+last_name = input("Enter salesperson's last name: ")
+sales = float(input("Enter sales amount: "))
+
+# Compute commission and next year's target
+commission, next_year_target, last_name = compute_sales_report(last_name, sales)
+
+# Print results
+print(f"Salesperson's Last Name: {last_name}")
+print(f"Commission: {commission}")
+print(f"Next Year's Sales Target: {next_year_target}")
