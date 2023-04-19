@@ -1,0 +1,20 @@
+def compute_bowling_scores(last_name, game_scores, handicap):
+    total_score = sum(game_scores)
+    average_score = total_score / len(game_scores)
+    average_score_with_handicap = (total_score + handicap) / len(game_scores)
+    return (average_score, average_score_with_handicap, last_name)
+  # Get input from user
+last_name = input("Enter bowler's last name: ")
+game_scores = []
+for i in range(3):
+    score = int(input(f"Enter game score {i+1}: "))
+    game_scores.append(score)
+handicap = int(input("Enter bowler's handicap: "))
+
+# Compute average score and average score with handicap
+average_score, average_score_with_handicap, last_name = compute_bowling_scores(last_name, game_scores, handicap)
+
+# Print results
+print(f"Bowler's Last Name: {last_name}")
+print(f"Average Score: {average_score}")
+print(f"Average Score with Handicap: {average_score_with_handicap}")
