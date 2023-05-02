@@ -1,0 +1,20 @@
+# Assign last names and exam scores to arrays
+last_names = ["Smith", "Johnson", "Williams", "Jones", "Brown", "Davis", "Miller", "Wilson", "Moore", "Taylor"]
+exam_scores = [85, 90, 78, 92, 80, 87, 79, 91, 84, 89]
+
+# Function to display the names and scores
+def display_names_scores(names, scores):
+    for i in range(len(names)):
+        print(f"{names[i]}: {scores[i]}")
+
+# Function to display the names and scores in reverse order
+def display_names_scores_reverse(names, scores):
+    for i in range(len(names)-1, -1, -1):
+        print(f"{names[i]}: {scores[i]}")
+
+# Call the functions
+print("Displaying Names and Scores:")
+display_names_scores(last_names, exam_scores)
+
+print("\nDisplaying Names and Scores in Reverse Order:")
+display_names_scores_reverse(last_names, exam_scores)
