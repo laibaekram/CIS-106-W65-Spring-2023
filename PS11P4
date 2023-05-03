@@ -1,0 +1,34 @@
+def load_player_data(filename):
+    player_names = []
+    batting_averages = []
+    with open(filename, 'r') as f:
+        for line in f:
+            parts = line.strip().split(',')
+            player_names.append(parts[0])
+            batting_averages.append(float(parts[1]))
+    return player_names, batting_averages
+
+def display_player_data(player_names, batting_averages):
+    print("{:<20}{}".format("Player Name", "Batting Average"))
+    for i in range(len(player_names)):
+        print("{:<20}{:.3f}".format(player_names[i], batting_averages[i]))
+
+def search_player_data(player_names, batting_averages, last_name):
+    for i in range(len(player_names)):
+        if player_names[i].lower() == last_name.lower():
+            return batting_averages[i]
+    return None
+
+filename = "player_data.txt"
+player_names, batting_averages = load_player_data(filename)
+display_player_data(player_names, batting_averages)
+
+while True:
+    last_name = input("Enter last name of player to search for (or 'quit' to exit): ")
+    if last_name.lower() == 'quit':
+        break
+    batting_average = search_player_data(player_names, batting_averages, last_name)
+    if batting_average is None:
+        print("Player not found.")
+    else:
+        print("Batting average for {} is {:.3f}".format(last_name, batting_average))
