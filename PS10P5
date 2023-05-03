@@ -1,0 +1,25 @@
+total = 0
+tax = 0
+
+def calculate_total_and_tax(qty, unit_price):
+    global total
+    global tax
+    
+    total = qty * unit_price
+    
+    tax = 0.07 * total
+    
+def main():
+    # Get user input for quantity and unit price
+    qty = int(input("Enter quantity: "))
+    unit_price = float(input("Enter unit price: "))
+    
+    # Calculate total and tax
+    calculate_total_and_tax(qty, unit_price)
+    
+    # Display total and tax
+    print("Total: $", format(total, ".2f"))
+    print("Tax: $", format(tax, ".2f"))
+
+# Call the main function
+main()
