@@ -1,0 +1,31 @@
+def load_player_data(filename):
+    player_names = []
+    batting_averages = []
+    with open(filename, 'r') as f:
+        for line in f:
+            name, average = line.strip().split(',')
+            player_names.append(name)
+            batting_averages.append(float(average))
+    return player_names, batting_averages
+
+def display_player_data(names, averages):
+    print("Player Names and Batting Averages:")
+    for i in range(len(names)):
+        print(names[i], ':', averages[i])
+
+def search_player(name, names, averages):
+    for i in range(len(names)):
+        if names[i] == name:
+            print("Batting Average for", name, "is", averages[i])
+            return
+    print("Name not found")
+
+filename = 'player_data.txt'
+player_names, batting_averages = load_player_data(filename)
+display_player_data(player_names, batting_averages)
+
+while True:
+    name = input("Enter a player's last name (or 'q' to quit): ")
+    if name == 'q':
+        break
+    search_player(name, player_names, batting_averages)
