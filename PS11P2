@@ -7,7 +7,6 @@ def display_names_scores(names, scores):
     for i in range(len(names)):
         print(f"{names[i]}: {scores[i]}")
 
-# Function to display the names and scores in reverse order
 def display_names_scores_reverse(names, scores):
     for i in range(len(names)-1, -1, -1):
         print(f"{names[i]}: {scores[i]}")
