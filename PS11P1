@@ -6,7 +6,6 @@ def display_names(names):
     for name in names:
         print(name)
 
-# Function to display the names in reverse order
 def display_names_reverse(names):
     for name in reversed(names):
         print(name)
